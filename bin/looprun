@@ -11,7 +11,7 @@ end
 options = Trollop::options do
     version "looprun #{File.read(File.join(File.dirname(__FILE__), '../VERSION')).strip.chomp} (c) 2010 Christoph Olszowka, released under MIT License"
     banner <<-EOS
-  Test is an awesome program that does something very, very important.
+  looprun is a simple script to repeatedly execute shell commands after they exit - for example to automatically restart your server
 
   Usage:
          looprun COMMAND [options]
