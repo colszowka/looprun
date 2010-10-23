@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.authors = ["Christoph Olszowka"]
   s.date = %q{2010-10-23}
   s.default_executable = %q{looprun}
-  s.description = %q{Simple script to repeatedly execute shell commands after they exit - for example to automatically restart your server}
+  s.description = %q{looprun is a simple script to repeatedly execute shell commands after they exit - for example to automatically restart your server}
   s.email = %q{christoph at olszowka de}
   s.executables = ["looprun"]
   s.extra_rdoc_files = [
