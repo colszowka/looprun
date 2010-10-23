@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "looprun"
     gem.summary = %Q{Simple script to repeatedly execute shell commands after they exit}
-    gem.description = %Q{Simple script to repeatedly execute shell commands after they exit - for example to automatically restart your server}
+    gem.description = %Q{looprun is a simple script to repeatedly execute shell commands after they exit - for example to automatically restart your server}
     gem.email = "christoph at olszowka de"
     gem.homepage = "http://github.com/colszowka/looprun"
     gem.authors = ["Christoph Olszowka"]
