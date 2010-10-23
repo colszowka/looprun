@@ -21,11 +21,15 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
      ".gitignore",
+     "Gemfile",
+     "Gemfile.lock",
      "LICENSE",
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "bin/looprun",
      "lib/looprun.rb",
+     "looprun.gemspec",
      "test/helper.rb",
      "test/test_looprun.rb"
   ]
@@ -44,11 +48,14 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<trollop>, [">= 1.16.0"])
       s.add_development_dependency(%q<shoulda>, ["= 2.10.3"])
     else
+      s.add_dependency(%q<trollop>, [">= 1.16.0"])
       s.add_dependency(%q<shoulda>, ["= 2.10.3"])
     end
   else
+    s.add_dependency(%q<trollop>, [">= 1.16.0"])
     s.add_dependency(%q<shoulda>, ["= 2.10.3"])
   end
 end
