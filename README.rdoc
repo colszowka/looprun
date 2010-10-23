@@ -6,6 +6,7 @@ Simple script to repeatedly execute shell commands after they exit - for example
   looprun "rails server -p 4567" # will automatically restart after 3 seconds (default)
   looprun "rake test" --timeout 300 # Run tests every five minutes
   
+Particularily useful in conjunction with Arthur Chiu's terminitor gem (see http://github.com/achiu/terminitor)
 
 == Note on Patches/Pull Requests
  
