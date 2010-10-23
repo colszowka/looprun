@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'trollop'
+
+command = ARGV.shift
+
+if command.nil? or command.strip.length == 0 or command =~ /^\-/
+  ARGV << "--help"
+end
+
+options = Trollop::options do
+    version "looprun #{File.read(File.join(File.dirname(__FILE__), '../VERSION')).strip.chomp} (c) 2010 Christoph Olszowka, released under MIT License"
+    banner <<-EOS
+  Test is an awesome program that does something very, very important.
+
+  Usage:
+         looprun COMMAND [options]
+         
+  where [options] are:
+  EOS
+  
+  opt :timeout, "Waiting time before relaunching", :default => 3, :short => '-t'
+end
+
+trap('INT') do 
+  puts
+  puts "Interrupted, exiting"
+  exit
+end
+
+loop do
+  puts "Invoking '#{command}'"
+  system command
+  print "Command '#{command}' finished, waiting for #{options[:timeout]} seconds before relaunch. Press CTRL-C to abort"
+  options[:timeout].times do
+    sleep 1
+    print '.'
+  end
+  puts "", ""
+end

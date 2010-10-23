@@ -1,6 +1,9 @@
 = looprun
 
-Description goes here.
+Simple script to repeatedly execute shell commands after they exit - for example to automatically restart your server
+
+  gem install looprun
+  looprun "rails server -p 4567"
 
 == Note on Patches/Pull Requests
  
@@ -14,4 +17,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2010 "Christoph. See LICENSE for details.
+Copyright (c) 2010 Christoph Olszowka. See LICENSE for details.
